@@ -186,3 +186,9 @@ app.use(jwt({
 通过国际版bing 搜索到的有用的信息，[Sending and Receiving Cookies from Express.js](https://alligator.io/nodejs/express-cookies/#:~:text=Getting%20Cookies%20in%20Express%20A%20great%20utility%20is,highly%20recommend%20you%20check%20out%20the%20source%20code.)
 
 程序员的悲哀： 你是正常人可能无法理解一个程序员在调试jwt 看到这个消息的内心兴奋"jwt expired" - which means我们的令牌真的生效而且检查了它的生命周期。
+
+### 401unauthorized ###
+这是在jwt 生成及核验未生效时我们get 到的状态码（unless 里页面除外）。一旦中间件核验生效则该错误也就消失了，因为他是Express 内涵的。
+
+## 调试 ##
+调试时不二法门简单简单再简单，这是我从<<[The Practice of Programming](https://book.douban.com/subject/1459281/)>> 以及我最欣赏的Javascript 程序员[Douglas Crockford](https://www.crockford.com/about.html) 通过他们的代码告诉我的。就是利用notepad++ 也能很好的完成工作和写blog。但行好事莫问前程。
