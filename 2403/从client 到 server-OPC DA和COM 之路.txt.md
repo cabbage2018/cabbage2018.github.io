@@ -11,7 +11,7 @@
 
 ### COM Init ###
 
-'''
+```
 using namespace std;
 //声明全局变量
 typedef struct OLEInit{
@@ -20,11 +20,11 @@ typedef struct OLEInit{
 } OLEInit;
 OLEInit oleInit; // 必须在最前面定义，因为在使用COM之前必须初始化COM库,否则程序会崩溃
 
-'''
+```
 
 ### 创建作为COM 对象的 server ###
 
-'''
+```
 	HRESULT hr;
 	hr = opcSvr.CreateInstance(__uuidof(OPCServer));
 	if (FAILED(hr)) {
@@ -32,18 +32,18 @@ OLEInit oleInit; // 必须在最前面定义，因为在使用COM之前必须初
 		exit(1);
 	}
 
-'''
+```
 
 ### 拿到group ###
 
-'''
+```
 	opcGrps = opcSvr->OPCGroups;
 	IOPCGroupPtr ConnectedGroup = opcGrps->Add(_variant_t("group0")); // 组名随意取
 
-'''
+```
 
 ### 存取Tag/Item ###
-'''
+```
 	ConnectedGroup->SyncRead(OPCDevice,
 		3, // 读取的Item数目
 		&pServerHandles, // 输入的服务器端句柄数组
@@ -52,11 +52,11 @@ OLEInit oleInit; // 必须在最前面定义，因为在使用COM之前必须初
 		&quality, // 读取的值的状态
 		&timestamp); // 读取的事件戳
 
-'''
+```
 
 在group 这个函数的前面还需要在内存空间里建立这样一个数据结构：
 
-'''
+```
 	vector<OPCItemPtr> opcReadItms;
 	vector<_bstr_t>
 	 itemAsStringArray = { "Saw-toothed Waves.Int4" ,"Saw-toothed Waves.Int2", "Bucket Brigade.String" };
@@ -74,7 +74,7 @@ OLEInit oleInit; // 必须在最前面定义，因为在使用COM之前必须初
 	}
 
 
-'''
+```
 
 这附近的常量字符串就是点位名。
 - "Saw-toothed Waves.Int4" 
