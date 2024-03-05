@@ -27,6 +27,7 @@ BSTRING 确实很难缠所以有人说的诚恳：MFC 最大的亮点就是CStri
 这样就是最最最简单的 数据记录遍历了。
 2条记录耗时200ms。
 
+参考文献[MFC下访问access数据库的几种方式](https://blog.csdn.net/robin_hc/article/details/82789996).破天荒的没参考任何官方文档。
 
 ## 下一步 ##
 大部分时间在研究building 智慧楼宇相关的软件标准，例如SignalR，SOAp，XML，Webservice。
