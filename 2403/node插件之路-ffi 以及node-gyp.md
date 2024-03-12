@@ -1,3 +1,5 @@
+我们为了解决问题，往往不得不先引入一个更大更普遍的问题。
+是所谓工程。
 
 ## 摘要 ##
 ffi 以及 node-gyp 仿佛都能实现addon。最大的区别是node 支持的版本差异。node8 对ffi 支持较好，C 的接口，利用ref 框架转换数据结构；node-gyp 我可以使用16.14 以及18.x 进行编译，得到myaddon.node 二进制。后者因为需要下载预编译的二进制平台软件包所以叫做prebuild 的addon 方案。 支持ffi 的node 版本上限我没测，不会大于16. 因为node16 无法引用ffi/ 它引用成功的是ffi-napi。
